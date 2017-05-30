@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular | Bookmark App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./styles/appStyle.css" />
+  </head>
+  <body ng-app="bookmarkApp">
+    <div class="jumbotron container" ng-controller="bookmarkController as book">
+      <h1>Angular</h1>
+      <h4>BookMark App</h4>
+      <div class="bookmarkInput">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">Website Name</span>
+          <input  ng-model="siteName" type="text" class="form-control" placeholder="Website Name" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon2">Website Address</span>
+          <input  ng-model="siteAddress" type="text" class="form-control" placeholder="Website Address" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div>
+         <button ng-show="isUrlValid()" type="button" class="btn btn-primary" ng-click="book.saveBookmark()">Add BookMark</button>
+      </div>
+      <div class="bookmarkList" ng-repeat="bookmark in bookMarks">
+        <div class="panel panel-default">
+          <div class="panel-heading">{{bookmark.name}}</div>
+          <div class="panel-body">
+            {{bookmark.address}}
+            <div>
+              <span id=bookmarkFeatures>
+                <span><button type="button" class="btn btn-success" ng-click="visitBookmark(bookmark.address)">Visit</button></span>
+                <span><button type="button" class="btn btn-danger" ng-click="deleteBookmark($index)">Delete</button></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
+    </div>
+    <script src="./scripts/library/angular.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
