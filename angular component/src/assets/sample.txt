@@ -1,0 +1,28 @@
+{
+"MonitoringRecords": 
+[{
+"City": "BRIGHTON",
+"DebtorName": "ATJ CONSTRUCTION SERVICES, LLC",
+"EndDate": "2022-06-28T00:00:00",
+"EntityId": "03588858-L",
+"MonitoringTypeDesc": "Business Entity",
+"StartDate": "2019-04-06T23:11:43",
+"StateCode": "IL"},
+{
+"City": null,
+"DebtorName": "EAGLE PLUMBING & MAINTENANCE, INC.",
+"EndDate": "2020-08-04T00:00:00",
+"EntityId": "",
+"MonitoringTypeDesc": "UCC Debtor",
+"StartDate": "2019-04-06T23:11:46",
+"StateCode": "GA"
+},
+{
+"City": "CLEVELAND",
+"DebtorName": "SEWER TECHNOLOGY LLC",
+"EndDate": "2024-02-08T00:00:00",
+"EntityId": "1876212",
+"MonitoringTypeDesc": "Business Entity",
+"StartDate": "2019-04-06T23:11:55",
+"StateCode": "OH"
+}]}
