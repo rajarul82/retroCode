@@ -1,0 +1,14 @@
+<h6 class="mp_align_center">
+  Click the "Get Records" button to load data to the grid.
+</h6>
+
+
+<div class="mp_align_center">
+	<p>Note: The below chart is displayed with hardcoded data which will be revisited.</p>
+	<app-customhighchart></app-customhighchart>
+</div>
+
+
+
+<div class="mp_align_center"><button (click)="getMonitoringRecords()">Get Records</button></div>
+<records-list [bindingData]="bindingData" [headers]="headers" (openModal)="openDebtorModal($event)"></records-list>

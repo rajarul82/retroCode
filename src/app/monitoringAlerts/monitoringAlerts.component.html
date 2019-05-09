@@ -1,0 +1,6 @@
+<h6 class="mp_align_center">
+  Click the "Get Alerts" button to load data to the grid.
+</h6>
+
+<div class="mp_align_center"><button (click)="getAlertRecords()">Get Alerts</button></div>
+<records-list [bindingData]="Alerts" [headers]="headers" (openModal)="openAlertModal($event)"></records-list>

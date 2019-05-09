@@ -43,8 +43,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   `,
 })
 export class RecordsListComponent {
-  @Input() bindingData: any[];
-  @Input() headers: any[];
+  @Input("bindingData") bindingData: any[];
+  @Input("headers") headers: any[];
 
   @Output() openModal: EventEmitter<string> = new EventEmitter<string>();
 

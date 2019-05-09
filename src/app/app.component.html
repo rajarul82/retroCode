@@ -2,13 +2,26 @@
 <head>
 <link href="//cdn.wolterskluwer.io/wk-css/0.26.x/standard.min.css" type="text/css" rel="stylesheet">
 </head>
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }} {{ name }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<div class="mp_align_center"><button (click)="getMonitoringRecords()">Get Records</button></div>
-<records-list [bindingData]="bindingData" [headers]="headers" (openModal)="openDebtorModal($event)"></records-list>
+<header role="banner" class="wk-header">
+  <div class="wk-header-container">
+    <a href="javascript:void(0)" class="wk-logo"><img src="https://cdn.wolterskluwer.io/wk-logos/1.0.x/wk-brand-small.svg" alt="Wolters Kluwer Product Name - Page anchor links to" class="wk-logo-small"><img src="https://cdn.wolterskluwer.io/wk-logos/1.0.x/wk-brand.svg" alt="Wolters Kluwer Product Name - Page anchor links to" class="wk-logo-large"></a>
+    <ul class="wk-more-menu wk-green-icons">
+      <li role="presentation"><a href="javascript:void(0)"><span wk-icon="more"></span>More</a></li>
+    </ul>
+    <ul class="wk-nav wk-green-icons">
+      <li role="presentation"><a routerLinkActive="active" routerLink=""><span wk-icon="wrench"></span>Home</a></li>
+      <li role="presentation"><a routerLinkActive="active" routerLink="/MonitoringRecords"><span wk-icon="question"></span>MonitoringRecords</a></li>
+      <li role="presentation"><a routerLinkActive="active" routerLink="/MonitoringAlerts"><span wk-icon="user"></span>MonitoringAlerts</a></li>
+    </ul>
+  </div>
+</header>
+<router-outlet></router-outlet>
+
+<footer role="contentinfo" class="wk-footer">
+  <div class="wk-footer-container"><a href="javascript:void(0)" class="wk-logo"><img src="https://cdn.wolterskluwer.io/wk-logos/1.0.x/wk-brand-small-white.svg" alt="Wolters Kluwer Product Name - Page anchor links to" class="wk-logo-small"><img src="https://cdn.wolterskluwer.io/wk-logos/1.0.x/wk-brand-white.svg" alt="Wolters Kluwer Product Name - Page anchor links to" class="wk-logo-large"></a></div>
+  <div class="wk-footer-copyright">
+    <div class="wk-footer-copyright-container">&copy; 2019 Wolters Kluwer and/or its affiliates. All rights reserved.</div>
+  </div>
+</footer>
 
 

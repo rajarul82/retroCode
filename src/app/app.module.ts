@@ -2,17 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { RecordsListComponent } from './grid.component';
-import { monitoringRecordService } from './monitoringRecords.service';
+import { AppRoutingModule } from './app-routing.module';
+import { monitoringRecordService } from './monitoringRecords/monitoringRecords.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    RecordsListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [monitoringRecordService],
   bootstrap: [AppComponent]
